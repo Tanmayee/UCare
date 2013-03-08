@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
-    <head>
-        <meta charset="UTF-8"/>
-        <!-- Extremely modest title -->
-        <title></title>
-        
-    </head>
-    <body>
-      <div class="question-unit">
-      	<div class="row">
-      	<h3>Are you married,${myModel.name}?</h3>
-      	<div class="span4">
-      		<div class="single-figure" style="display:inline-block"></div><br>
-           	<input type="radio" id="rbtnSingle"  name="rbtnMarried" value="single"
-            	 data-bind="myModel.MaritalStatus" data-bind-options="defaultValue : 'single'"/>
-            	 <label>Single</label>
-        </div>
-           
-        <div class="span4">
-        	<div>
-        		<div class="single-figure" style="display:inline-block"></div>
-        		<div class="single-figure" style="display:inline-block"></div>
-         	</div>
-            	<input type="radio" id="rbtnMarried"  name="rbtnMarried" value="married" 
-            	data-bind="myModel.MaritalStatus"/><label>Married</label>
-        </div>
-     
+<head>
+<meta charset="UTF-8" />
+<!-- Extremely modest title -->
+<title></title>
+<script>
+	var VIEW_SCOPE={
+			Mojo.setDataVal("myModel.forOther",1);
+	}
+</script>
+</head>
+<body>
+	<div class="row question-unit" align="center">
+		<!-- Page 1 or 2 text -->
+		<h2>Good Afternoon!</h2>
+		<h4>What is your first name?</h4>
+		<input data-bind="myModel.name" id="TEST_NAME"
+			/> <br />
+		<h4>Who do you want to help today?</h4>
+		<input data-bind="myModel.otherName" id="TEST_OTHER_NAME"/> <br /> <br />
+		<div>
+			<h3>Is the person from California?</h3>
+			<tr>
+				<td><input type="radio" id="rbtnCali" name="rbtnCali"
+					value="yes" data-bind="myModel.fromCali" /> Yes</td>
+				<td><input type="radio" id="rbtnNoCali" name="rbtnCali"
+					value="no" data-bind="myModel.fromCali" />No</td>
+			</tr>
 		</div>
-       <br>
-		 	<div class="pull-bottom">
-       		<a class="btn pull-left" data-nav="back">Back</a>
-       		<a class="btn pull-right" data-nav="next">Continue</a>
-       </div>
-       </div>
-    </body>
+		<ul class="pager">
+			<li class="next"><a data-nav="next">Continue &rarr;</a></li>
+		</ul>
+	</div>
+</body>
 </html>

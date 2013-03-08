@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8"/>
+        <!-- Extremely modest title -->
+        <title></title>
+        <script>
+        		var values = new Array();
+				$.each($("input[name='special_condition[]']:checked"), function() {
+  					values.push($(this).val());
+				  // or you can do something to the actual checked checkboxes by working directly with  'this'
+				  // something like $(this).hide() (only something useful, probably) :P
+				});
+				
+				var VIEW_SCOPE ={
+					onEnd : function(){
+						Mojo.setDataVal("myModel.specialCond", values);
+						
+						var g= Mojo.getDataVal("myModel.forOther");
+        
+						if(g == 1) {
+							jQuery(".you").toggle();        	
+							jQuery(".other").toggle();
+						}
+				
+					}
+				}
+        </script>
+    </head>
+    <body>
+      	<div class="question-unit" align="center">
+	      	<div style="display:inline">
+		      	<h3>Are you currently insured?</h3>
+		      	<h3 class="other" style="display:none"> ${myModel.otherName} Insured?</h3>
+		      	<div style="display:inline-block">
+		           	<input type="radio" id="rbtInsured"  name="rbtInsured" value="1"
+		            	 data-bind="myModel.insured" data-bind-options="defaultValue : '1'"/>
+		            	 <label>Insured</label>
+		        </div>
+		        <div style="display: inline-block;margin-left: 25px">
+		            	<input type="radio" id="rbtUninsured"  name="rbtInsured" value="0" 
+		            	data-bind="myModel.insured"/><label for="rbtUninsured">No</label>
+		    	</div>
+			</div>
+			<div style="display:inline">
+		      	<h3>Any special conditions?</h3>
+		      	<div style="display:inline-block" class="row">
+		      		<div class="span4">
+		      		<div>
+		           <input id="medical_condition" name="special_condition[]" type="checkbox" value="y"  class="pull-left"/>
+            			<label for="medical_condition" class="pull-left">Medical condition or health problem</label><br></div>
+            		<div>
+            		<input id="disability" class="pull-left" name="special_condition[]" type="checkbox" value="y" />
+            			<label class="pull-left" for="disability">Disability</label><br/></div>
+            		<div><input class="pull-left" id="cancer" name="special_condition[]" type="checkbox" value="y" />
+            			<label class="pull-left" for="cancer">Breast or cervical cancer</label><br/></div>
+            		<div><input class="pull-left" id="dependents" name="special_condition[]" type="checkbox" value="y" />
+          				<label class="pull-left" for="dependents">Dependent under 21</label><br/></div>
+          			</div>
+          		<div class="span4">
+          			<div><input class="pull-left" id="ltc" name="special_condition[]" type="checkbox" value="y" />
+          				<label class="pull-left" for="ltc">Nursing home or long term care</label><br/></div>
+          			<div><input class="pull-left" id="special_need" name="special_condition[]" type="checkbox" value="y" />
+          				<label class="pull-left" for="special_need">Special healthcare need</label><br/></div>
+          			<div><input class="pull-left" id="pregnant" name="special_condition[]" type="checkbox" value="y" />
+            			<label class="pull-left" for="pregnant">Pregnancy</label><br /></div>
+          				</div>
+		    	</div>
+		    	<ul class="pager">
+		  <li class="previous">
+		    <a data-nav="back">&larr; Back</a>
+		  </li>
+		  <li class="next">
+		    <a data-nav="next">Continue &rarr;</a>
+		  </li>
+		</ul>
+			<!-- <div class="pull-bottom">
+				<a class="btn pull-left" data-nav="back">Back</a> <a
+					class="btn pull-right" data-nav="next">Continue</a>
+			</div> -->
+		</div>
+		</div>
+	</body>
+</html>

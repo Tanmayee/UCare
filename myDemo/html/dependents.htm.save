@@ -46,8 +46,9 @@
     </head>
     <body>
       <div class="question-unit" align="center">
-      	<h3 class = "you">Do you have any dependants?</h3>
-      	<h3 class="other" style="display:none"> Any ${myModel.otherName} Dependants?</h3>
+	<h3 class="you">Are you married ${myModel.name}?</h3>
+	<h3 class="other" style="display:none">Is ${myModel.otherName}  married?</h3>
+      	<h3>How many people other than you are in your household?</h3>
       	 <!--<input data-bind="myModel.dependents"  data-validate="numberOnly"/>-->
       	 <div style="display:block">
       	 <div id="selfDiv" style="display: inline-block">

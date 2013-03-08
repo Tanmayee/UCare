@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+
+	<head>
+		<script src="https://app.divshot.com/js/jquery.min.js"></script>
+		<script src="https://app.divshot.com/js/bootstrap.min.js"></script>
+		<title>Donation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+		<!--<link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
+		<link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
+		<link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/c73b6f4a521b3af51f97ad0085364000531f27c4.css"> -->
+		<script type="text/javascript">
+			function button1() {
+				var text1 = document.getElementById("donation");
+				text1.value = '5';
+			}
+
+			function button2() {
+				var text1 = document.getElementById("donation");
+				text1.value = '10';
+			}
+
+			function button3() {
+				var text1 = document.getElementById("donation");
+				text1.value = '25';
+			}
+
+			function button4() {
+				var text1 = document.getElementById("donation");
+				text1.value = '50';
+			}
+
+			function button5() {
+				var text1 = document.getElementById("donation");
+				text1.value = '100';
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="buttons">
+				<div class="hero-unit">
+					<h1 align="center">Donate to us!</h1>
+					<p align="center">
+						Help some one in need who cannot afford healthcare.
+						<br />
+						Your donation is valuable to us!
+					</p>
+					<!--<button type="button" name="" value="" class="css3button"
+					onclick="button1()">$5</button>
+					<button type="button" name="" value="" class="css3button" onclick="button2()">$10</button>
+					<button type="button" name="" value="" class="css3button"
+					onclick="button3()">$25</button>
+					<button type="button" name="" value="" class="css3button"
+					onclick="button4()">$50</button>
+					<button type="button" name="" value="" class="css3button"
+					onclick="button5()">$100</button> -->
+					<p align="center">
+					<a class="btn btn-primary btn-large ">$5</a>
+					<a class="btn btn-primary btn-large">$10</a>
+					<a class="btn btn-primary btn-large">$25</a>
+					<a class="btn btn-primary btn-large">$50</a>
+					<a class="btn btn-primary btn-large">$100</a>
+					</p>
+				</div>
+			<!--	<style>
+					*:focus {
+						outline: none; /* Prevents blue border in Webkit */
+					}
+
+					body {
+						font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /*  */
+					}
+
+					#top_bit {
+						width: 760px;
+						margin: 0 auto;
+					}
+
+					form {
+						width: 300px;
+						margin: 20px auto;
+					}
+
+					p {
+						line-height: 1.6;
+					}
+
+					input, textarea {
+						font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+						background-color: #fff;
+						border: 1px solid #ccc;
+						font-size: 20px;
+						width: 300px;
+						min-height: 30px;
+						display: block;
+						margin-bottom: 16px;
+						margin-top: 8px;
+						-webkit-border-radius: 5px;
+						-moz-border-radius: 5px;
+						border-radius: 5px;
+						-webkit-transition: all 0.5s ease-in-out;
+						-moz-transition: all 0.5s ease-in-out;
+						transition: all 0.5s ease-in-out;
+					}
+
+					textarea {
+						min-height: 200px;
+					}
+
+					input:focus, textarea:focus {
+						-webkit-box-shadow: 0 0 25px #ccc;
+						-moz-box-shadow: 0 0 25px #ccc;
+						box-shadow: 0 0 25px #ccc;
+						-webkit-transform: scale(1.05);
+						-moz-transform: scale(1.05);
+						transform: scale(1.05);
+					}
+
+					/* The interesting bit */
+
+					input:not(:focus), textarea:not(:focus) {
+						opacity: 0.5;
+					}
+
+					input[type=submit] {
+						padding: 10px;
+						background: none;
+						opacity: 1.0;
+					}
+			</style> -->
+				<form action="" method="post">
+					<label for="name">Name:</label>
+					<input type="text" name="name" required="" placeholder="Name">
+					<label for="email">Email:</label>
+					<input type="email" name="email" required="" placeholder="email@example.com">
+					<label for="phone">Phone:</label>
+					<input type="text" name="number" required="" placeholder="123-456-7890">
+					<label for="website">Address:</label>
+					<input type="text" name="Address" required="" placeholder="San Diego, CA">
+					<label for="number">Donation: (in USD)</label>
+					<input type="number" name="number" required=""
+					id="donation" placeholder="$5" value="">
+					<select>
+						<option value="Master Card">Master Card</option>
+						<option value="Visa">Visa</option>
+						<option value="American Express">American Express</option>
+					</select>
+					<label for="card">Credit Card Number:</label>
+					<input type="text" name="card" required=""
+					placeholder="1234-5678-9876-4321">
+					<label for="message">Message for others:</label>
+					<textarea name="message" required ></textarea>
+					<input type="submit" value="Donate">
+				</form>
+			</div>
+	</body>
+
+</html>

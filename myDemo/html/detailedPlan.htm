@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8"/>
+        <!-- Extremely modest title -->
+        <title>Detailed plan!</title>
+        
+        <script>
+        	var VIEW_SCOPE={
+        		onStart : function(){
+        			
+				var g= Mojo.getDataVal("myModel.forOther");
+        
+				if(g == 1) {
+					jQuery(".you").toggle();        	
+					jQuery(".other").toggle();
+				}
+        	}      	
+        </script>
+        
+    </head>
+    <body>
+      <div class="question-unit" align="center">
+      	<h3>Kaiser Permanente</h3>
+      	<h3 class="other" style="display:none"> ${myModel.otherName} Kaiser Permanente?</h3>
+
+      	<h4>Bronze Plan</h4>
+ 	   	<h4 class="other" style="display:none"> ${myModel.otherName} Bronze Plan?</h4>
+
+      	<br />
+    <table>
+           <tr align="center">
+    
+    <td>Outpatient Services :</td>
+    <td> $20 plan</td>
+    </tr>    
+        
+    <td>Hospital Care :</td>
+    <td> $350 co-pay plan per day</td>
+    </tr>    
+        
+    <td></td>
+    <td> <label>Generic :</label>$10 co-pay <br/>
+    	<label>Brand :</label>$35 co-pay <br/>
+    </td>
+    </tr>    
+</table>
+
+       		<a class="btn pull-left" data-nav="back">Sign up for me</a>
+       		<a class="btn pull-right" data-nav="next">I cant afford it</a>
+
+      	<br/>
+      	 <ul class="pager">
+		  <li class="previous">
+		    <a data-nav="back">&larr; Back</a>
+		  </li>
+		 <!--  <li class="next">
+		    <a data-nav="next">Continue &rarr;</a>
+		  </li> -->
+		</ul>
+      	<!-- <div class="pull-bottom">
+       		<a class="btn pull-left" data-nav="back">Back</a>
+       </div> -->
+		</div>
+    </body>
+</html>
